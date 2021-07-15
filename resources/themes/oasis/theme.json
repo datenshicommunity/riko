@@ -1,0 +1,11 @@
+{
+    "id": "oasis",
+    "name": "Oasis",
+    "description": "Th\u00e8me pour le CMS Azuriom.",
+    "version": "1.1",
+    "url": "#",
+    "authors": [
+        "Rqmain"
+    ],
+    "apiId": 41
+}
