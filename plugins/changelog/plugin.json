@@ -1,0 +1,15 @@
+{
+    "id": "changelog",
+    "name": "Changelog",
+    "description": "Plugin changelog for Azuriom",
+    "version": "1.0.1",
+    "url": "https:\/\/azuriom.com",
+    "authors": [
+        "Bryan M."
+    ],
+    "providers": [
+        "\\Azuriom\\Plugin\\Changelog\\Providers\\ChangelogServiceProvider",
+        "\\Azuriom\\Plugin\\Changelog\\Providers\\RouteServiceProvider"
+    ],
+    "apiId": 53
+}
