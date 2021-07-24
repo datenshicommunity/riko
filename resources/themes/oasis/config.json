@@ -14,11 +14,11 @@
     "footer_links": [
         {
             "name": "Play",
-            "value": "minecraft://play.datenshi.pw"
+            "value": "minecraft://?addExternalServer=DATENSHI|play.datenshi.pw"
         }
     ],
     "footer_social_twitter": null,
-    "footer_social_discord": "https://link.troke.id/datenshi",
+    "footer_social_discord": "https://datenshi.pw/discord",
     "footer_social_steam": null,
     "footer_social_youtube": "https://www.youtube.com/channel/UCKwyGpWAD17sVpKwlRDhisw",
     "footer_social_teamspeak": null,

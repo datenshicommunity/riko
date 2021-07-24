@@ -3,7 +3,7 @@
 @section('title', $category->name)
 
 @section('content')
-    <div class="container content">
+    <div class="container content bg-dark">
         <h1>{{ $category->name }}</h1>
 
         <a href="{{ route('wiki.index') }}" class="btn btn-secondary mb-3">
