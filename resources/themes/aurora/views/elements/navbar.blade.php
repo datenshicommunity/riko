@@ -6,12 +6,12 @@
                     <div class="online">
                         @if($server && $server->isOnline())
                             @if($server->getOnlinePlayers() > 1)
-                                <p><span>{{ $server->getOnlinePlayers() }}</span> Joueurs en connectés!</p>
+                                <p><span>{{ $server->getOnlinePlayers() }}</span> online players</p>
                             @else
-                                <p><span>{{ $server->getOnlinePlayers() }}</span> Joueur en connecté!</p>
+                                <p><span>{{ $server->getOnlinePlayers() }}</span> online players</p>
                             @endif
                         @else
-                            <p><i class="fas fa-times"></i> Joueur en ligne!</p>
+                            <p><i class="fas fa-times"></i> Online players</p>
                         @endif
                     </div>
                 </li>
