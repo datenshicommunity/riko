@@ -10,7 +10,7 @@
                     @foreach($posts as $post)
                         <div class="post">
                             @if($post->hasImage())
-                                <img src="{{ $post->imageUrl() }}" alt="{{ $post->title }}">
+                                <img src="{{ $post->imageUrl() }}" class="post-img img-fluid" alt="{{ $post->title }}">
                             @endif
                             <div class="post-body">
                                 <h3 class="post-title"><a href="{{ route('posts.show', $post) }}">{{ $post->title }}</a></h3>
