@@ -618,7 +618,7 @@ table tbody td {
   text-align: center;
 }
 .header-nav .header-content-mid .description h1 {
-  color: #730777;
+  color: #ffffff;
   font-weight: bold;
   font-size: 35px;
 }
@@ -857,7 +857,7 @@ table tbody td {
   font-size: 16px;
 }
 .footer .copyright span {
-  color: #33e6ff;
+  color: #730777;
   font-weight: bold;
 }
 .footer .copyright a[href="https://azuriom.com"] {
@@ -869,7 +869,7 @@ table tbody td {
   font-weight: bold;
 }
 .footer .copyright .mention i {
-  color: #99f3ff;
+  color: #730777;
 }
 
 @media screen and (max-width: 1200px) {
@@ -939,7 +939,7 @@ select:focus {
   padding: 6px 20px;
 }
 .btn-success:hover, .btn-primary:hover, .btn-secondary:hover, .btn-warning:hover, .btn-info:hover, .btn-danger:hover {
-  background-color: #00cae6;
+  background-color: #730777;
   color: #1E2024;
   border: none;
 }
