@@ -103,7 +103,7 @@ table thead th {
   text-align: start;
   border-bottom: none !important;
   font-weight: bold;
-  color: #1E2024 !important;
+  color: #fdfdfd !important;
 }
 table tbody {
   background-color: #1E2024;
@@ -933,14 +933,14 @@ select:focus {
 .btn-success, .btn-primary, .btn-secondary, .btn-warning, .btn-info, .btn-danger {
   background-color: #730777;
   font-weight: bold;
-  color: #1E2024;
+  color: #fcfcfc;
   transition: all 0.3s ease-in-out;
   border: none;
   padding: 6px 20px;
 }
 .btn-success:hover, .btn-primary:hover, .btn-secondary:hover, .btn-warning:hover, .btn-info:hover, .btn-danger:hover {
   background-color: #730777;
-  color: #1E2024;
+  color: #ffffff;
   border: none;
 }
 
@@ -1121,9 +1121,7 @@ select:focus {
   margin-top: 10px;
 }
 .faqs .faq .card-header {
-  background-color: #292C31;
-  border: none;
-  border-radius: 10px !important;
+  background-color: #511168;
 }
 .faqs .faq .card-header a {
   font-weight: bold;
@@ -1136,8 +1134,6 @@ select:focus {
   border-radius: 10px !important;
 }
 .faqs .faq .collapse .card-body {
-  margin-top: 10px;
-  border-radius: 10px !important;
   transition: all 0.3s ease-in-out;
 }
 
