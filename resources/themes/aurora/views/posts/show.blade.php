@@ -26,10 +26,6 @@
 
                 <div class="card shadow-sm mb-4">
                     <div class="card-body">
-                        @if($post->hasImage())
-                            <img class="img-fluid rounded mx-auto mb-2" src="{{ $post->imageUrl() }}" alt="{{ $post->title }}">
-                        @endif
-
                         <div class="card-text">
                             {!! $post->content !!}
                         </div>

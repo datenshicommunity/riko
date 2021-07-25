@@ -9,9 +9,6 @@
                 <div class="posts">
                     @foreach($posts as $post)
                         <div class="post">
-                            @if($post->hasImage())
-                                <img src="{{ $post->imageUrl() }}" class="post-img img-fluid" alt="{{ $post->title }}">
-                            @endif
                             <div class="post-body">
                                 <h3 class="post-title"><a href="{{ route('posts.show', $post) }}">{{ $post->title }}</a></h3>
                                 <p class="post-text">{{ Str::limit(strip_tags($post->content), 250) }}</p>
