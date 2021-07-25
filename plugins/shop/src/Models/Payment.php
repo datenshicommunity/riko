@@ -123,7 +123,7 @@ class Payment extends Model
                     ->addField(trans('shop::messages.fields.payment-id'), $this->transaction_id)
                     ->url(route('shop.admin.payments.show', $this))
                     ->color('#004de6')
-                    ->footer('Azuriom v'.Azuriom::version())
+                    ->footer('Datenshi X Loebad')
                     ->timestamp(now());
 
                 rescue(function () use ($embed, $webhookUrl) {
