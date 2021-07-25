@@ -4,12 +4,16 @@
 @section('description', $page->description)
 
 @section('content')
-    <div class="container content-parent">
-        <div class="page-article">
-            <h1 class="title-block">{{ $page->title }}</h1>
+    <div class="container content">
+        <div class="page-container">
+            <div class="page-container-content">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h1 class="page-container-title">{{ $page->title }}</h1>
 
-            <div class="content">
-                {!! $page->content !!}
+                        {!! $page->content !!}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
