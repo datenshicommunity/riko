@@ -165,6 +165,11 @@ table tbody td {
   color: #730777;
 }
 
+.list-group-item {
+  background-color: #fff0;
+  border: 0px solid rgba(0,0,0,.125)
+}
+
 .tab-content {
   padding: 15px;
   background-color: #1E2024 !important;
