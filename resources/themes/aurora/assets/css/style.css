@@ -40,7 +40,7 @@ li {
 a {
   text-decoration: none;
   cursor: pointer;
-  color: white;
+  color: #ac3ac1;
   transition: color 0.3s ease-in-out;
 }
 a:hover {
