@@ -1,6 +1,6 @@
 {
-    "id": "ban",
-    "name": "Ban",
+    "id": "advancedban",
+    "name": "AdvancedBan",
     "description": "An AdvancedBan plugin to view your punishments from your Azuriom website!",
     "version": "1.0.7",
     "url": "https:\/\/azuriom.com\/market\/resources\/26",

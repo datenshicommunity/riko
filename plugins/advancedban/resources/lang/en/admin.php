@@ -2,7 +2,7 @@
 
 return [
 	'nav' => [
-		'title' => 'Ban',
+		'title' => 'AdvancedBan',
 
 		'settings' => 'Settings',
 	],
