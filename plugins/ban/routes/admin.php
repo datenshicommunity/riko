@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('can:ban.admin')->group(function () {
+Route::middleware('can:advancedban.admin')->group(function () {
     Route::get('/settings', 'SettingController@show')->name('settings');
     Route::post('/settings', 'SettingController@save')->name('settings.save');
 });

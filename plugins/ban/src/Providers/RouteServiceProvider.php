@@ -1,6 +1,6 @@
 <?php
 
-namespace Azuriom\Plugin\Ban\Providers;
+namespace Azuriom\Plugin\AdvancedBan\Providers;
 
 use Azuriom\Extensions\Plugin\BaseRouteServiceProvider;
 use Illuminate\Support\Facades\Route;
@@ -12,7 +12,7 @@ class RouteServiceProvider extends BaseRouteServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'Azuriom\Plugin\Ban\Controllers';
+    protected $namespace = 'Azuriom\Plugin\AdvancedBan\Controllers';
 
     /**
      * Define the routes for the application.
