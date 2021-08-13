@@ -1,11 +1,11 @@
 <?php
 
-namespace Azuriom\Plugin\AdvancedBan\Providers;
+namespace Azuriom\Plugin\Ban\Providers;
 
 use Azuriom\Models\Permission;
 use Azuriom\Extensions\Plugin\BasePluginServiceProvider;
 
-class AdvancedBanServiceProvider extends BasePluginServiceProvider
+class BanServiceProvider extends BasePluginServiceProvider
 {
     /**
      * Register any plugin services.
@@ -37,7 +37,7 @@ class AdvancedBanServiceProvider extends BasePluginServiceProvider
         $this->registerAdminNavigation();
 
         Permission::registerPermissions([
-            'advancedban.admin' => 'advancedban::admin.permission',
+            'ban.admin' => 'ban::admin.permission',
         ]);
     }
 
@@ -49,7 +49,7 @@ class AdvancedBanServiceProvider extends BasePluginServiceProvider
     protected function routeDescriptions()
     {
         return [
-            'advancedban.index' => 'advancedban::messages.title',
+            'ban.index' => 'ban::messages.title',
         ];
     }
 
@@ -61,11 +61,11 @@ class AdvancedBanServiceProvider extends BasePluginServiceProvider
     protected function adminNavigation()
     {
         return [
-            'advancedban' => [
-            	'name' => 'advancedban::admin.nav.title',
+            'ban' => [
+            	'name' => 'ban::admin.nav.title',
             	'icon' => 'fas fa-hammer',
-            	'route' => 'advancedban.admin.settings',
-            	'permission' => 'advancedban.admin'
+            	'route' => 'ban.admin.settings',
+            	'permission' => 'ban.admin'
             ],
         ];
     }

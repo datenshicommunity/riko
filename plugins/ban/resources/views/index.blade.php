@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', trans('advancedban::messages.title'))
+@section('title', trans('ban::messages.title'))
 
 @section('content')
     <div class="container content">
@@ -10,7 +10,7 @@
 	    	</div>
 
 	    	<div class="col">
-			    <form class="form-inline mb-3 float-right" action="{{ route('advancedban.index') }}" method="GET">
+			    <form class="form-inline mb-3 float-right" action="{{ route('ban.index') }}" method="GET">
 			        <div class="form-group mb-2">
 			            <label for="searchInput" class="sr-only">{{ trans('messages.actions.search') }}</label>
 
@@ -33,11 +33,11 @@
 				<thead>
 					<tr>
 						<th scope="col">{{ trans('messages.fields.type') }}</th>
-						<th scope="col">{{ trans('advancedban::messages.username') }}</th>
-						<th scope="col">{{ trans('advancedban::messages.reason') }}</th>
-						<th scope="col">{{ trans('advancedban::messages.staff') }}</th>
+						<th scope="col">{{ trans('ban::messages.username') }}</th>
+						<th scope="col">{{ trans('ban::messages.reason') }}</th>
+						<th scope="col">{{ trans('ban::messages.staff') }}</th>
 						<th scope="col">{{ trans('messages.fields.date') }}</th>
-						<th scope="col">{{ trans('advancedban::messages.expires_at') }}</th>
+						<th scope="col">{{ trans('ban::messages.expires_at') }}</th>
 						<th scope="col" class="text-right">{{ trans('messages.fields.status') }}</th>
 					</tr>
 				</thead>
@@ -59,15 +59,15 @@
 							</td>
 							<td class="text-right">
 								@if(in_array($punishment, $punishments) && time() < $punishment->end)
-									{{ trans('advancedban::messages.active') }}
+									{{ trans('ban::messages.active') }}
 								@else
-									{{ trans('advancedban::messages.finished') }}
+									{{ trans('ban::messages.finished') }}
 								@endif
 							</td>
 						</tr>
 					@empty
 						<tr>
-							<td colspan="7">{{ trans('advancedban::messages.no_punishments_found') }}</td>
+							<td colspan="7">{{ trans('ban::messages.no_punishments_found') }}</td>
 						</tr>
 					@endforelse
 				</tbody>

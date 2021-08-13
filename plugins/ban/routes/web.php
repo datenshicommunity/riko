@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Azuriom\Plugin\AdvancedBan\Controllers\AdvancedBanHomeController;
+use Azuriom\Plugin\Ban\Controllers\BanHomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +15,4 @@ use Azuriom\Plugin\AdvancedBan\Controllers\AdvancedBanHomeController;
 |
 */
 
-Route::get('/', [AdvancedBanHomeController::class, 'index'])->name('index');
+Route::get('/', [BanHomeController::class, 'index'])->name('index');

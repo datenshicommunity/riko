@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title' => 'AdvancedBan',
+    'title' => 'Ban',
 
     'username' => 'Pseudo',
     'staff' => 'Staff',

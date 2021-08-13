@@ -1,15 +1,15 @@
 {
     "id": "ban",
     "name": "Ban",
-    "description": "An AdvancedBan plugin to view your punishments from your Azuriom website!",
+    "description": "An Ban plugin to view your punishments from your Azuriom website!",
     "version": "1.0.7",
     "url": "https:\/\/azuriom.com\/market\/resources\/26",
     "authors": [
         "ZeProf2Coding"
     ],
     "providers": [
-        "\\Azuriom\\Plugin\\AdvancedBan\\Providers\\AdvancedBanServiceProvider",
-        "\\Azuriom\\Plugin\\AdvancedBan\\Providers\\RouteServiceProvider"
+        "\\Azuriom\\Plugin\\Ban\\Providers\\BanServiceProvider",
+        "\\Azuriom\\Plugin\\Ban\\Providers\\RouteServiceProvider"
     ],
     "apiId": 26
 }

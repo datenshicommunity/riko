@@ -2,15 +2,15 @@
 
 return [
 	'nav' => [
-		'title' => 'AdvancedBan',
+		'title' => 'Ban',
 
 		'settings' => 'Paramètres',
 	],
 
-	'permission' => 'Voir et gérer le plugin AdvancedBan',
+	'permission' => 'Voir et gérer le plugin Ban',
 
 	'settings' => [
-		'title' => 'Paramètres de la page AdvancedBan',
+		'title' => 'Paramètres de la page Ban',
 
 		'host' => 'Hôte',
 		'port' => 'Port',

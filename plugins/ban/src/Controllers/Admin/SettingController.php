@@ -1,6 +1,6 @@
 <?php
 
-namespace Azuriom\Plugin\AdvancedBan\Controllers\Admin;
+namespace Azuriom\Plugin\Ban\Controllers\Admin;
 
 use Azuriom\Http\Controllers\Controller;
 use Azuriom\Models\Setting;
@@ -9,21 +9,21 @@ use Illuminate\Http\Request;
 class SettingController extends Controller
 {
     /**
-     * Display the AdvancedBan settings page.
+     * Display the Ban settings page.
      *
      * @return \Illuminate\Http\Response
      */
     public function show()
     {
-        return view('advancedban::admin.settings', [
-            'host' => setting('advancedban.host', '127.0.0.1'),
-            'port' => setting('advancedban.port', '3306'),
-            'database' => setting('advancedban.database', 'advancedban'),
-            'username' => setting('advancedban.username', 'advancedban'),
-            'password' => setting('advancedban.password'),
-            'perPage' => setting('advancedban.perPage', 10),
-            'historyTable' => setting('advancedban.historyTable', 'PunishmentHistory'),
-            'punishmentTable' => setting('advancedban.punishmentTable', 'Punishments'),
+        return view('ban::admin.settings', [
+            'host' => setting('ban.host', '127.0.0.1'),
+            'port' => setting('ban.port', '3306'),
+            'database' => setting('ban.database', 'ban'),
+            'username' => setting('ban.username', 'ban'),
+            'password' => setting('ban.password'),
+            'perPage' => setting('ban.perPage', 10),
+            'historyTable' => setting('ban.historyTable', 'PunishmentHistory'),
+            'punishmentTable' => setting('ban.punishmentTable', 'Punishments'),
         ]);
     }
 
@@ -41,16 +41,16 @@ class SettingController extends Controller
         ]);
 
         Setting::updateSettings([
-            'advancedban.host' => $request->input('host'),
-            'advancedban.port' => $request->input('port'),
-            'advancedban.database' => $request->input('database'),
-            'advancedban.username' => $request->input('username'),
-            'advancedban.password' => $request->input('password'),
-            'advancedban.perPage' => $request->input('perPage'),
-            'advancedban.historyTable' => $request->input('historyTable'),
-            'advancedban.punishmentTable' => $request->input('punishmentTable'),
+            'ban.host' => $request->input('host'),
+            'ban.port' => $request->input('port'),
+            'ban.database' => $request->input('database'),
+            'ban.username' => $request->input('username'),
+            'ban.password' => $request->input('password'),
+            'ban.perPage' => $request->input('perPage'),
+            'ban.historyTable' => $request->input('historyTable'),
+            'ban.punishmentTable' => $request->input('punishmentTable'),
         ]);
 
-        return redirect()->route('advancedban.admin.settings')->with('success', trans('admin.settings.status.updated'));
+        return redirect()->route('ban.admin.settings')->with('success', trans('admin.settings.status.updated'));
     }
 }

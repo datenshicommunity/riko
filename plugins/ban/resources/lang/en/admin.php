@@ -7,10 +7,10 @@ return [
 		'settings' => 'Settings',
 	],
 
-	'permission' => 'View and manage AdvancedBan plugin',
+	'permission' => 'View and manage Ban plugin',
 
 	'settings' => [
-		'title' => 'AdvancedBan page settings',
+		'title' => 'Ban page settings',
 
 		'host' => 'Host',
 		'port' => 'Port',

@@ -1,2 +1,2 @@
-# Plugin-AdvancedBan
-AdvancedBan Azuriom Plugin
+# Plugin-Ban
+Ban Azuriom Plugin

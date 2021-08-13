@@ -1,6 +1,6 @@
 <?php
 
-namespace Azuriom\Plugin\AdvancedBan\Controllers;
+namespace Azuriom\Plugin\Ban\Controllers;
 
 use Azuriom\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -8,7 +8,7 @@ use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 
-class AdvancedBanHomeController extends Controller
+class BanHomeController extends Controller
 {
     /**
      * Show the home plugin page.
@@ -17,16 +17,16 @@ class AdvancedBanHomeController extends Controller
      */
     public function index(Request $request)
     {
-		if (config()->get('database.connections.advancedban') === null) {
-			abort_if(setting('advancedban.host') === null, 404);
+		if (config()->get('database.connections.ban') === null) {
+			abort_if(setting('ban.host') === null, 404);
 
-	        config()->set('database.connections.advancedban', [
+	        config()->set('database.connections.ban', [
 	            'driver'    => 'mysql',
-	            'host'      => setting('advancedban.host', '127.0.0.1'),
-	            'port'      => setting('advancedban.port', '3306'),
-	            'database'  => setting('advancedban.database', 'advancedban'),
-	            'username'  => setting('advancedban.username', 'advancedban'),
-	            'password'  => setting('advancedban.password'),
+	            'host'      => setting('ban.host', '127.0.0.1'),
+	            'port'      => setting('ban.port', '3306'),
+	            'database'  => setting('ban.database', 'ban'),
+	            'username'  => setting('ban.username', 'ban'),
+	            'password'  => setting('ban.password'),
 	            'charset'   => 'utf8',
 	            'collation' => 'utf8_unicode_ci',
 	            'prefix'    => '',
@@ -36,8 +36,8 @@ class AdvancedBanHomeController extends Controller
 
 	    $query = strtolower($request->input('q'));
 
-	    $punishmentHistory = DB::connection('advancedban')->select('SELECT * FROM ' . setting('advancedban.historyTable', 'PunishmentHistory') . ' ORDER BY start DESC');
-	    $punishments = DB::connection('advancedban')->select('SELECT * FROM ' . setting('advancedban.punishmentTable', 'Punishments') . ' ORDER BY start DESC');
+	    $punishmentHistory = DB::connection('ban')->select('SELECT * FROM ' . setting('ban.historyTable', 'PunishmentHistory') . ' ORDER BY start DESC');
+	    $punishments = DB::connection('ban')->select('SELECT * FROM ' . setting('ban.punishmentTable', 'Punishments') . ' ORDER BY start DESC');
 	    
 	    $allPunishments = collect(array_merge($punishmentHistory, $punishments))->unique();
 
@@ -51,11 +51,11 @@ class AdvancedBanHomeController extends Controller
 	    }
 
 	    $currentPage = LengthAwarePaginator::resolveCurrentPage();
-	    $perPage = setting('advancedban.perPage', 10);
+	    $perPage = setting('ban.perPage', 10);
 
 	    $currentItems = $allPunishments->slice($perPage * ($currentPage - 1), $perPage);
 	    $paginator = new LengthAwarePaginator($currentItems, count($allPunishments), $perPage, $currentPage, ['path' => LengthAwarePaginator::resolveCurrentPath()]);
 
-        return view('advancedban::index', ['punishments' => $punishments, 'punishmentHistory' => $punishmentHistory, 'allPunishments' => $paginator]);
+        return view('ban::index', ['punishments' => $punishments, 'punishmentHistory' => $punishmentHistory, 'allPunishments' => $paginator]);
     }
 }
