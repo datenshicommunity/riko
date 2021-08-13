@@ -123,7 +123,7 @@ class Payment extends Model
                     ->addField(trans('shop::messages.fields.payment-id'), $this->transaction_id ?? trans('messages.none'))
                     ->url(route('shop.admin.payments.show', $this))
                     ->color('#004de6')
-                    ->footer('Datenshi X Loebad')
+                    ->footer('Datenshi X Loebad'.Azuriom::version())
                     ->timestamp(now());
 
                 rescue(function () use ($embed, $webhookUrl) {
@@ -131,7 +131,9 @@ class Payment extends Model
                 });
             }
 
-            $this->user->notify(new PaymentPaidNotification($this));
+            rescue(function () {
+                $this->user->notify(new PaymentPaidNotification($this));
+            });
         }
     }
 

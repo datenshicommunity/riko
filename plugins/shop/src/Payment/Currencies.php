@@ -17,7 +17,7 @@ class Currencies
         'HKD' => 'Hong Kong dollar',
         'HUF' => 'Hungarian forint',
         'INR' => 'Indian rupee',
-	'IDR' => 'Indonesian rupiah',
+        'IDR' => 'Indonesian rupiah',
         'ILS' => 'Israeli new shekel',
         'MYR' => 'Malaysian ringgit',
         'MXN' => 'Mexican peso',
@@ -36,7 +36,6 @@ class Currencies
     private const SYMBOLS = [
         'EUR' => '€',
         'GBP' => '£',
-	'IDR' => 'Rp',
         'JPY' => '¥',
         'AUD' => '$',
         'CAD' => '$',
