@@ -928,7 +928,7 @@ select {
 }
 
 select:focus {
-  background-color: transparent !important;
+  background-color: #292c31 !important;
   color: white !important;
   border-color: #730777 !important;
   outline: 0 !important;
