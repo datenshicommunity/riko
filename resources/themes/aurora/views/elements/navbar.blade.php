@@ -119,6 +119,7 @@
                 <div class="description">
                     <h1>{{ site_name() }}</h1>
                     <p>{{ theme_config('subtitle') }}</p>
+                    <h4><span class="badge badge-secondary">play.datenshi.pw</span></h4>
                 </div>
             </div>
             <div class="header-content-bottom">
